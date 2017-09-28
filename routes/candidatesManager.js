@@ -36,7 +36,6 @@ exports.getHello = function(req, res) {
 exports.getCandidatesList = function(req, res) {
     console.log('GET /candidates');
     var contractInstance = VotingContract.at(deployedContract.address);
-
     var candidates = contractInstance.getCandidates.call().map(parseHexToStr);
     var result = candidates.map(can => {
         return { 

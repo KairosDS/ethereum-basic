@@ -13,9 +13,10 @@
     }
   ],
   "scripts": {
-    "testrpc": "node_modules/.bin/testrpc",
-    "app": "node app.js",
-    "start": "open http://localhost:3000/api/"
+    "install": "npm install",
+    "web:build": "cd web && npm install && ng build",
+    "ethereum:deploy": "node_modules/.bin/testrpc",
+    "app": "node app.js"
   },
   "private": true,
   "dependencies": {
